@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950094E91C4F233000A69479 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 950094E81C4F233000A69479 /* main.m */; };
+		950094EC1C4F233000A69479 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 950094EB1C4F233000A69479 /* AppDelegate.m */; };
+		950094EF1C4F233000A69479 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950094EE1C4F233000A69479 /* ViewController.m */; };
+		950094F21C4F233000A69479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950094F01C4F233000A69479 /* Main.storyboard */; };
+		950094F41C4F233000A69479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950094F31C4F233000A69479 /* Assets.xcassets */; };
+		950094F71C4F233000A69479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950094F51C4F233000A69479 /* LaunchScreen.storyboard */; };
+		950095021C4F233000A69479 /* ZCFileDataCacheDomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950095011C4F233000A69479 /* ZCFileDataCacheDomeTests.m */; };
+		9500950D1C4F233000A69479 /* ZCFileDataCacheDomeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9500950C1C4F233000A69479 /* ZCFileDataCacheDomeUITests.m */; };
+		950095241C4F238900A69479 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9500951D1C4F238900A69479 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		950095251C4F238900A69479 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 950095211C4F238900A69479 /* NSData+AES256.m */; };
+		950095261C4F238900A69479 /* ZCFileDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 950095231C4F238900A69479 /* ZCFileDataCache.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		950094FE1C4F233000A69479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950094DC1C4F233000A69479 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950094E31C4F233000A69479;
+			remoteInfo = ZCFileDataCacheDome;
+		};
+		950095091C4F233000A69479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950094DC1C4F233000A69479 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950094E31C4F233000A69479;
+			remoteInfo = ZCFileDataCacheDome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		950094E41C4F233000A69479 /* ZCFileDataCacheDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZCFileDataCacheDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		950094E81C4F233000A69479 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		950094EA1C4F233000A69479 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		950094EB1C4F233000A69479 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		950094ED1C4F233000A69479 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		950094EE1C4F233000A69479 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		950094F11C4F233000A69479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		950094F31C4F233000A69479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		950094F61C4F233000A69479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		950094F81C4F233000A69479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950094FD1C4F233000A69479 /* ZCFileDataCacheDomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZCFileDataCacheDomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950095011C4F233000A69479 /* ZCFileDataCacheDomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCFileDataCacheDomeTests.m; sourceTree = "<group>"; };
+		950095031C4F233000A69479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950095081C4F233000A69479 /* ZCFileDataCacheDomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZCFileDataCacheDomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9500950C1C4F233000A69479 /* ZCFileDataCacheDomeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCFileDataCacheDomeUITests.m; sourceTree = "<group>"; };
+		9500950E1C4F233000A69479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9500951C1C4F238900A69479 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		9500951D1C4F238900A69479 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		9500951E1C4F238900A69479 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		950095201C4F238900A69479 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
+		950095211C4F238900A69479 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		950095221C4F238900A69479 /* ZCFileDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCFileDataCache.h; sourceTree = "<group>"; };
+		950095231C4F238900A69479 /* ZCFileDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCFileDataCache.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		950094E11C4F233000A69479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950094FA1C4F233000A69479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950095051C4F233000A69479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		950094DB1C4F233000A69479 = {
+			isa = PBXGroup;
+			children = (
+				950094E61C4F233000A69479 /* ZCFileDataCacheDome */,
+				950095001C4F233000A69479 /* ZCFileDataCacheDomeTests */,
+				9500950B1C4F233000A69479 /* ZCFileDataCacheDomeUITests */,
+				950094E51C4F233000A69479 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		950094E51C4F233000A69479 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950094E41C4F233000A69479 /* ZCFileDataCacheDome.app */,
+				950094FD1C4F233000A69479 /* ZCFileDataCacheDomeTests.xctest */,
+				950095081C4F233000A69479 /* ZCFileDataCacheDomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		950094E61C4F233000A69479 /* ZCFileDataCacheDome */ = {
+			isa = PBXGroup;
+			children = (
+				9500951A1C4F238900A69479 /* ZCFileDataCahce */,
+				950094EA1C4F233000A69479 /* AppDelegate.h */,
+				950094EB1C4F233000A69479 /* AppDelegate.m */,
+				950094ED1C4F233000A69479 /* ViewController.h */,
+				950094EE1C4F233000A69479 /* ViewController.m */,
+				950094F01C4F233000A69479 /* Main.storyboard */,
+				950094F31C4F233000A69479 /* Assets.xcassets */,
+				950094F51C4F233000A69479 /* LaunchScreen.storyboard */,
+				950094F81C4F233000A69479 /* Info.plist */,
+				950094E71C4F233000A69479 /* Supporting Files */,
+			);
+			path = ZCFileDataCacheDome;
+			sourceTree = "<group>";
+		};
+		950094E71C4F233000A69479 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				950094E81C4F233000A69479 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		950095001C4F233000A69479 /* ZCFileDataCacheDomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				950095011C4F233000A69479 /* ZCFileDataCacheDomeTests.m */,
+				950095031C4F233000A69479 /* Info.plist */,
+			);
+			path = ZCFileDataCacheDomeTests;
+			sourceTree = "<group>";
+		};
+		9500950B1C4F233000A69479 /* ZCFileDataCacheDomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9500950C1C4F233000A69479 /* ZCFileDataCacheDomeUITests.m */,
+				9500950E1C4F233000A69479 /* Info.plist */,
+			);
+			path = ZCFileDataCacheDomeUITests;
+			sourceTree = "<group>";
+		};
+		9500951A1C4F238900A69479 /* ZCFileDataCahce */ = {
+			isa = PBXGroup;
+			children = (
+				9500951B1C4F238900A69479 /* gtmbase64 */,
+				9500951F1C4F238900A69479 /* NSData+AES256 */,
+				950095221C4F238900A69479 /* ZCFileDataCache.h */,
+				950095231C4F238900A69479 /* ZCFileDataCache.m */,
+			);
+			name = ZCFileDataCahce;
+			path = ../../ZCFileDataCahce;
+			sourceTree = "<group>";
+		};
+		9500951B1C4F238900A69479 /* gtmbase64 */ = {
+			isa = PBXGroup;
+			children = (
+				9500951C1C4F238900A69479 /* GTMBase64.h */,
+				9500951D1C4F238900A69479 /* GTMBase64.m */,
+				9500951E1C4F238900A69479 /* GTMDefines.h */,
+			);
+			path = gtmbase64;
+			sourceTree = "<group>";
+		};
+		9500951F1C4F238900A69479 /* NSData+AES256 */ = {
+			isa = PBXGroup;
+			children = (
+				950095201C4F238900A69479 /* NSData+AES256.h */,
+				950095211C4F238900A69479 /* NSData+AES256.m */,
+			);
+			path = "NSData+AES256";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		950094E31C4F233000A69479 /* ZCFileDataCacheDome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950095111C4F233000A69479 /* Build configuration list for PBXNativeTarget "ZCFileDataCacheDome" */;
+			buildPhases = (
+				950094E01C4F233000A69479 /* Sources */,
+				950094E11C4F233000A69479 /* Frameworks */,
+				950094E21C4F233000A69479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZCFileDataCacheDome;
+			productName = ZCFileDataCacheDome;
+			productReference = 950094E41C4F233000A69479 /* ZCFileDataCacheDome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		950094FC1C4F233000A69479 /* ZCFileDataCacheDomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950095141C4F233000A69479 /* Build configuration list for PBXNativeTarget "ZCFileDataCacheDomeTests" */;
+			buildPhases = (
+				950094F91C4F233000A69479 /* Sources */,
+				950094FA1C4F233000A69479 /* Frameworks */,
+				950094FB1C4F233000A69479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950094FF1C4F233000A69479 /* PBXTargetDependency */,
+			);
+			name = ZCFileDataCacheDomeTests;
+			productName = ZCFileDataCacheDomeTests;
+			productReference = 950094FD1C4F233000A69479 /* ZCFileDataCacheDomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		950095071C4F233000A69479 /* ZCFileDataCacheDomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950095171C4F233000A69479 /* Build configuration list for PBXNativeTarget "ZCFileDataCacheDomeUITests" */;
+			buildPhases = (
+				950095041C4F233000A69479 /* Sources */,
+				950095051C4F233000A69479 /* Frameworks */,
+				950095061C4F233000A69479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9500950A1C4F233000A69479 /* PBXTargetDependency */,
+			);
+			name = ZCFileDataCacheDomeUITests;
+			productName = ZCFileDataCacheDomeUITests;
+			productReference = 950095081C4F233000A69479 /* ZCFileDataCacheDomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		950094DC1C4F233000A69479 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = t_zc;
+				TargetAttributes = {
+					950094E31C4F233000A69479 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					950094FC1C4F233000A69479 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 950094E31C4F233000A69479;
+					};
+					950095071C4F233000A69479 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 950094E31C4F233000A69479;
+					};
+				};
+			};
+			buildConfigurationList = 950094DF1C4F233000A69479 /* Build configuration list for PBXProject "ZCFileDataCacheDome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 950094DB1C4F233000A69479;
+			productRefGroup = 950094E51C4F233000A69479 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950094E31C4F233000A69479 /* ZCFileDataCacheDome */,
+				950094FC1C4F233000A69479 /* ZCFileDataCacheDomeTests */,
+				950095071C4F233000A69479 /* ZCFileDataCacheDomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		950094E21C4F233000A69479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950094F71C4F233000A69479 /* LaunchScreen.storyboard in Resources */,
+				950094F41C4F233000A69479 /* Assets.xcassets in Resources */,
+				950094F21C4F233000A69479 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950094FB1C4F233000A69479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950095061C4F233000A69479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		950094E01C4F233000A69479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950094EF1C4F233000A69479 /* ViewController.m in Sources */,
+				950095251C4F238900A69479 /* NSData+AES256.m in Sources */,
+				950094EC1C4F233000A69479 /* AppDelegate.m in Sources */,
+				950094E91C4F233000A69479 /* main.m in Sources */,
+				950095241C4F238900A69479 /* GTMBase64.m in Sources */,
+				950095261C4F238900A69479 /* ZCFileDataCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950094F91C4F233000A69479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950095021C4F233000A69479 /* ZCFileDataCacheDomeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950095041C4F233000A69479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9500950D1C4F233000A69479 /* ZCFileDataCacheDomeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		950094FF1C4F233000A69479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950094E31C4F233000A69479 /* ZCFileDataCacheDome */;
+			targetProxy = 950094FE1C4F233000A69479 /* PBXContainerItemProxy */;
+		};
+		9500950A1C4F233000A69479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950094E31C4F233000A69479 /* ZCFileDataCacheDome */;
+			targetProxy = 950095091C4F233000A69479 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		950094F01C4F233000A69479 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950094F11C4F233000A69479 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		950094F51C4F233000A69479 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950094F61C4F233000A69479 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9500950F1C4F233000A69479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		950095101C4F233000A69479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		950095121C4F233000A69479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZCFileDataCacheDome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zc.ZCFileDataCache.ZCFileDataCacheDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		950095131C4F233000A69479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZCFileDataCacheDome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zc.ZCFileDataCache.ZCFileDataCacheDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		950095151C4F233000A69479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZCFileDataCacheDomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zc.ZCFileDataCache.ZCFileDataCacheDomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZCFileDataCacheDome.app/ZCFileDataCacheDome";
+			};
+			name = Debug;
+		};
+		950095161C4F233000A69479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZCFileDataCacheDomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zc.ZCFileDataCache.ZCFileDataCacheDomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZCFileDataCacheDome.app/ZCFileDataCacheDome";
+			};
+			name = Release;
+		};
+		950095181C4F233000A69479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZCFileDataCacheDomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zc.ZCFileDataCache.ZCFileDataCacheDomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZCFileDataCacheDome;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		950095191C4F233000A69479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZCFileDataCacheDomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zc.ZCFileDataCache.ZCFileDataCacheDomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZCFileDataCacheDome;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		950094DF1C4F233000A69479 /* Build configuration list for PBXProject "ZCFileDataCacheDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9500950F1C4F233000A69479 /* Debug */,
+				950095101C4F233000A69479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950095111C4F233000A69479 /* Build configuration list for PBXNativeTarget "ZCFileDataCacheDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950095121C4F233000A69479 /* Debug */,
+				950095131C4F233000A69479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950095141C4F233000A69479 /* Build configuration list for PBXNativeTarget "ZCFileDataCacheDomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950095151C4F233000A69479 /* Debug */,
+				950095161C4F233000A69479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950095171C4F233000A69479 /* Build configuration list for PBXNativeTarget "ZCFileDataCacheDomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950095181C4F233000A69479 /* Debug */,
+				950095191C4F233000A69479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 950094DC1C4F233000A69479 /* Project object */;
+}
