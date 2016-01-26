@@ -8,7 +8,6 @@
 
 #import "ZCFileDataCache.h"
 #import "NSData+AES256.h"
-#import "GTMBase64.h"
 
 #ifdef DEBUG
 #define ZCLog(...) NSLog(__VA_ARGS__)
@@ -99,8 +98,8 @@ static ZCFileDataCache * fileDataCache;
             NSMutableDictionary *cacheDict = [NSKeyedUnarchiver unarchiveObjectWithData:cacheData];
             _c_cacheDict = [[NSMutableDictionary alloc] initWithDictionary:cacheDict];
         }else{
-            NSData * cacheData = [GTMBase64 decodeData:[NSData dataWithContentsOfFile:cachePath]];
-            NSDictionary *cacheDict = [NSKeyedUnarchiver unarchiveObjectWithData:cacheData];
+            //NSData * cacheData = [GTMBase64 decodeData:[NSData dataWithContentsOfFile:cachePath]];
+            NSDictionary *cacheDict = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:cachePath]];
             _c_cacheDict = [[NSMutableDictionary alloc] initWithDictionary:cacheDict];
         }
     }
@@ -128,7 +127,7 @@ static ZCFileDataCache * fileDataCache;
                 }
             }else{
                 @try {
-                    NSData *cacheData =  [GTMBase64 encodeData:[NSKeyedArchiver archivedDataWithRootObject:dict]];
+                    NSData *cacheData =  [NSKeyedArchiver archivedDataWithRootObject:dict];
                     [cacheData writeToFile:cachePath atomically:NO];
                 }
                 @catch (NSException *exception) {
