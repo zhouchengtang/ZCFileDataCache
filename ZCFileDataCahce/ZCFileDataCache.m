@@ -35,6 +35,7 @@
 {
     NSMutableDictionary * _c_cacheDict;
     dispatch_queue_t _writeDataCacheQueue;
+    dispatch_queue_t _cacheDataQueue;
 }
 
 static ZCFileDataCache * fileDataCache;
@@ -53,9 +54,16 @@ static ZCFileDataCache * fileDataCache;
 
 - (dispatch_queue_t)writeDataCacheQueue{
     if (!_writeDataCacheQueue) {
-        _writeDataCacheQueue = dispatch_queue_create("serialQwrite_data_cacheueue", DISPATCH_QUEUE_SERIAL);
+        _writeDataCacheQueue = dispatch_queue_create("cachewrite_data_zcfiledatacacheueue", DISPATCH_QUEUE_SERIAL);
     }
     return _writeDataCacheQueue;
+}
+
+- (dispatch_queue_t)cacheDataQueue{
+    if (!_cacheDataQueue) {
+        _cacheDataQueue = dispatch_queue_create("cache_data_zcfiledatacacheueue", DISPATCH_QUEUE_SERIAL);
+    }
+    return _cacheDataQueue;
 }
 
 +(id)allocWithZone:(NSZone *)zone{
@@ -138,7 +146,7 @@ static ZCFileDataCache * fileDataCache;
         if (self.writeDataInMainQueQue) {
             dictWirteToDiskBlock();
         }else{
-            dispatch_async([self writeDataCacheQueue], ^(void) {
+            dispatch_barrier_async([self writeDataCacheQueue], ^(void) {
                 dictWirteToDiskBlock();
             });
         }
@@ -169,9 +177,11 @@ static ZCFileDataCache * fileDataCache;
 
 - (void)setObject:(id)value forKey:(NSString *)defaultName
 {
-    NSMutableDictionary * cacheDict = [NSMutableDictionary dictionaryWithDictionary:[self currentDataCache]];
-    [cacheDict setObject:value forKey:defaultName];
-    [self setDataEncryptWithPath:[self cache_path] withSaveData:cacheDict];
+    dispatch_barrier_sync([self cacheDataQueue], ^(void) {
+        NSMutableDictionary * cacheDict = [NSMutableDictionary dictionaryWithDictionary:[self currentDataCache]];
+        [cacheDict setObject:value forKey:defaultName];
+        [self setDataEncryptWithPath:[self cache_path] withSaveData:cacheDict];
+    });
 }
 
 - (void)setValue:(id)value forKey:(NSString *)defaultName
@@ -181,12 +191,16 @@ static ZCFileDataCache * fileDataCache;
 
 - (id)objectForKey:(NSString *)defaultName
 {
-    NSMutableDictionary * cacheDict = [NSMutableDictionary dictionaryWithDictionary:[self currentDataCache]];;
-    if ([cacheDict objectForKey:defaultName]) {
-        return [cacheDict objectForKey:defaultName];
-    }else{
-        return nil;
-    }
+    __block id returnValue = nil;
+    dispatch_sync([self cacheDataQueue], ^(void) {
+        NSMutableDictionary * cacheDict = [NSMutableDictionary dictionaryWithDictionary:[self currentDataCache]];
+        if ([cacheDict objectForKey:defaultName]) {
+            returnValue = [cacheDict objectForKey:defaultName];
+        }else{
+            returnValue =nil;
+        }
+    });
+    return returnValue;
 }
 
 - (id)valueForKey:(NSString *)defaultName
@@ -196,11 +210,13 @@ static ZCFileDataCache * fileDataCache;
 
 - (void)removeObjectForKey:(NSString *)key
 {
-    NSMutableDictionary * cacheDict = [NSMutableDictionary dictionaryWithDictionary:[self currentDataCache]];
-    if ([cacheDict objectForKey:key]) {
-        [cacheDict removeObjectForKey:key];
-        [self setDataEncryptWithPath:[self cache_path] withSaveData:cacheDict];
-    }
+    dispatch_barrier_sync([self cacheDataQueue], ^(void) {
+        NSMutableDictionary * cacheDict = [NSMutableDictionary dictionaryWithDictionary:[self currentDataCache]];
+        if ([cacheDict objectForKey:key]) {
+            [cacheDict removeObjectForKey:key];
+            [self setDataEncryptWithPath:[self cache_path] withSaveData:cacheDict];
+        }
+    });
 }
 
 - (void)showContent
@@ -219,9 +235,11 @@ static ZCFileDataCache * fileDataCache;
 
 - (void)clearDataCache
 {
-    NSString * cachePath = [self cache_path];
-    [self removeFileCachePath:cachePath];
-    _c_cacheDict = nil;
+    dispatch_barrier_sync([self cacheDataQueue], ^(void) {
+        NSString * cachePath = [self cache_path];
+        [self removeFileCachePath:cachePath];
+        _c_cacheDict = nil;
+    });
 }
 
 - (void)removeFileCachePath:(NSString *)path
